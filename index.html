@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>EnyRiza Roots</title>
+
+<style>
+
+/* =====================================
+   RESET
+===================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f7f1e7;
+  color:#222;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:80px 8%;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.65)
+  ),
+  url('./producto.jpg');
+
+  background-size:cover;
+  background-position:center;
+
+}
+
+
+/* CONTENIDO */
+
+.hero-contenido{
+
+  max-width:1300px;
+  width:100%;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:60px;
+  align-items:center;
+
+}
+
+
+/* TEXTO */
+
+.hero-texto h1{
+
+  font-size:80px;
+  color:white;
+
+  line-height:1;
+
+  margin-bottom:25px;
+
+}
+
+.hero-texto p{
+
+  color:#f3f3f3;
+
+  font-size:22px;
+
+  line-height:1.8;
+
+  margin-bottom:35px;
+
+}
+
+
+/* BOTONES */
+
+.botones{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.boton{
+
+  padding:18px 35px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  font-weight:bold;
+
+  transition:.3s;
+
+}
+
+.boton:hover{
+  transform:translateY(-5px);
+}
+
+.amarillo{
+  background:#d4a017;
+  color:black;
+}
+
+.blanco{
+  border:2px solid white;
+  color:white;
+}
+
+
+/* IMAGEN */
+
+.hero-imagen{
+  display:flex;
+  justify-content:center;
+}
+
+.hero-imagen img{
+
+  width:100%;
+  max-width:500px;
+
+  border-radius:40px;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.45);
+
+}
+
+
+/* =====================================
+   BENEFICIOS
+===================================== */
+
+.beneficios{
+  padding:120px 8%;
+}
+
+
+/* TITULO */
+
+.titulo{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.titulo h2{
+
+  font-size:55px;
+
+  color:#355e3b;
+
+  margin-bottom:15px;
+
+}
+
+.titulo p{
+  color:#666;
+  font-size:20px;
+}
+
+
+/* GRID */
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:30px;
+
+}
+
+
+/* TARJETAS */
+
+.card{
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:35px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+  transition:.3s;
+
+}
+
+.card:hover{
+
+  transform:translateY(-10px);
+
+}
+
+
+.card h3{
+
+  margin:20px 0;
+
+  color:#355e3b;
+
+  font-size:28px;
+
+}
+
+.card p{
+
+  color:#666;
+
+  line-height:1.8;
+
+}
+
+
+/* =====================================
+   PRODUCTOS
+===================================== */
+
+.productos{
+
+  background:white;
+
+  padding:120px 8%;
+
+}
+
+
+/* PRODUCTO */
+
+.producto{
+
+  background:#f7f1e7;
+
+  border-radius:35px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+  transition:.3s;
+
+}
+
+.producto:hover{
+  transform:translateY(-10px);
+}
+
+
+.producto img{
+
+  width:100%;
+
+  height:350px;
+
+  object-fit:cover;
+
+}
+
+
+.producto-info{
+  padding:35px;
+}
+
+.producto-info h3{
+
+  font-size:32px;
+
+  margin-bottom:15px;
+
+  color:#355e3b;
+
+}
+
+.producto-info p{
+
+  color:#666;
+
+  line-height:1.8;
+
+}
+
+.precio{
+
+  color:#d4a017;
+
+  font-size:38px;
+
+  font-weight:bold;
+
+  margin:20px 0;
+
+}
+
+
+/* =====================================
+   TESTIMONIOS
+===================================== */
+
+.testimonios{
+  padding:120px 8%;
+}
+
+
+/* TESTIMONIO */
+
+.testimonio{
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:35px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.estrellas{
+
+  font-size:30px;
+
+  margin-bottom:25px;
+
+}
+
+.testimonio p{
+
+  color:#555;
+
+  line-height:1.9;
+
+  font-size:18px;
+
+}
+
+
+/* =====================================
+   VENDEDORAS
+===================================== */
+
+.vendedoras{
+
+  background:#355e3b;
+
+  color:white;
+
+  padding:120px 8%;
+
+}
+
+
+/* CONTENIDO */
+
+.vendedoras-contenido{
+
+  max-width:1300px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:60px;
+
+  align-items:center;
+
+}
+
+
+/* TEXTO */
+
+.vendedoras-texto h2{
+
+  font-size:60px;
+
+  margin-bottom:30px;
+
+}
+
+.vendedoras-texto p{
+
+  font-size:22px;
+
+  line-height:1.8;
+
+  margin-bottom:30px;
+
+}
+
+.lista{
+  list-style:none;
+}
+
+.lista li{
+
+  margin-bottom:15px;
+
+  font-size:20px;
+
+}
+
+
+/* FORMULARIO */
+
+.formulario{
+
+  background:white;
+
+  padding:45px;
+
+  border-radius:40px;
+
+}
+
+.formulario h3{
+
+  color:#355e3b;
+
+  font-size:35px;
+
+  margin-bottom:25px;
+
+}
+
+
+.formulario input{
+
+  width:100%;
+
+  padding:18px;
+
+  margin-bottom:18px;
+
+  border:none;
+
+  background:#f2f2f2;
+
+  border-radius:18px;
+
+}
+
+
+.formulario button{
+
+  width:100%;
+
+  padding:18px;
+
+  border:none;
+
+  background:#d4a017;
+
+  border-radius:20px;
+
+  font-weight:bold;
+
+  font-size:18px;
+
+  cursor:pointer;
+
+}
+
+
+/* =====================================
+   PAGOS
+===================================== */
+
+.pagos{
+  padding:120px 8%;
+  background:white;
+}
+
+
+/* METODOS */
+
+.metodos{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(180px,1fr));
+
+  gap:20px;
+
+  margin-top:50px;
+
+}
+
+.metodo{
+
+  background:#f7f1e7;
+
+  padding:35px;
+
+  border-radius:30px;
+
+  text-align:center;
+
+  font-weight:bold;
+
+  font-size:24px;
+
+}
+
+
+/* =====================================
+   FAQ
+===================================== */
+
+.faq{
+  padding:120px 8%;
+}
+
+
+/* PREGUNTA */
+
+.pregunta{
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:25px;
+
+  margin-bottom:20px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.pregunta h3{
+  color:#355e3b;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+  background:#111;
+
+  color:white;
+
+  text-align:center;
+
+  padding:50px;
+
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:900px){
+
+  .hero-contenido,
+  .vendedoras-contenido{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .hero-texto,
+  .vendedoras-texto{
+    text-align:center;
+  }
+
+  .hero-texto h1{
+    font-size:50px;
+  }
+
+  .vendedoras-texto h2{
+    font-size:42px;
+  }
+
+  .botones{
+    justify-content:center;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-contenido">
+
+
+<div class="hero-texto">
+
+<h1>
+
+EnyRiza Roots
+
+</h1>
+
+<p>
+
+La nueva generación en cuidado capilar premium.
+Fortalece, revitaliza y transforma tu cabello
+con ingredientes naturales de alta calidad.
+
+</p>
+
+<div class="botones">
+
+<a href="#" class="boton amarillo">
+Comprar ahora
+</a>
+
+<a href="#" class="boton blanco">
+Ser vendedora
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-imagen">
+
+<img src="./producto.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BENEFICIOS -->
+
+<section class="beneficios">
+
+<div class="titulo">
+
+<h2>
+Beneficios
+</h2>
+
+<p>
+Resultados reales desde las primeras semanas
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+🌿 Crecimiento saludable
+</h3>
+
+<p>
+Estimula naturalmente el crecimiento del cabello.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+✨ Brillo intenso
+</h3>
+
+<p>
+Devuelve luminosidad y suavidad.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+💪 Reduce la caída
+</h3>
+
+<p>
+Fortalece la raíz y evita el quiebre.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🍃 Ingredientes naturales
+</h3>
+
+<p>
+Sin químicos agresivos ni sulfatos dañinos.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTOS -->
+
+<section class="productos">
+
+<div class="titulo">
+
+<h2>
+Productos destacados
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+<div class="producto">
+
+<img src="./producto.jpg">
+
+<div class="producto-info">
+
+<h3>
+Shampoo Roots
+</h3>
+
+<p>
+Limpieza profunda y fortalecimiento capilar.
+</p>
+
+<div class="precio">
+$49.900
+</div>
+
+<a href="#" class="boton amarillo">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+
+<div class="producto">
+
+<img src="./producto.jpg">
+
+<div class="producto-info">
+
+<h3>
+Tónico Roots
+</h3>
+
+<p>
+Estimula crecimiento y revitaliza las raíces.
+</p>
+
+<div class="precio">
+$59.900
+</div>
+
+<a href="#" class="boton amarillo">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+
+<div class="producto">
+
+<img src="./producto.jpg">
+
+<div class="producto-info">
+
+<h3>
+Acondicionador Roots
+</h3>
+
+<p>
+Hidratación profunda y brillo natural.
+</p>
+
+<div class="precio">
+$44.900
+</div>
+
+<a href="#" class="boton amarillo">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TESTIMONIOS -->
+
+<section class="testimonios">
+
+<div class="titulo">
+
+<h2>
+Testimonios
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+<div class="testimonio">
+
+<div class="estrellas">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+
+Mi cabello dejó de caerse y ahora luce más fuerte y brillante.
+
+</p>
+
+</div>
+
+
+<div class="testimonio">
+
+<div class="estrellas">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+
+Los resultados fueron visibles desde la primera semana.
+
+</p>
+
+</div>
+
+
+<div class="testimonio">
+
+<div class="estrellas">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+
+El mejor tratamiento capilar natural que he probado.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VENDEDORAS -->
+
+<section class="vendedoras">
+
+<div class="vendedoras-contenido">
+
+
+<div class="vendedoras-texto">
+
+<h2>
+
+Gana dinero vendiendo
+EnyRiza Roots
+
+</h2>
+
+<p>
+
+Crea tu perfil de vendedora,
+comparte tu enlace personalizado
+y gana comisiones por cada venta.
+
+</p>
+
+<ul class="lista">
+
+<li>
+✅ Panel de ventas
+</li>
+
+<li>
+✅ Comisiones automáticas
+</li>
+
+<li>
+✅ Pagos por Nequi y transferencia
+</li>
+
+<li>
+✅ Material promocional
+</li>
+
+<li>
+✅ Atención personalizada
+</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="formulario">
+
+<h3>
+Registro de vendedoras
+</h3>
+
+<input type="text" placeholder="Nombre">
+
+<input type="email" placeholder="Correo">
+
+<input type="text" placeholder="Ciudad">
+
+<input type="text" placeholder="WhatsApp">
+
+<button>
+Registrarme
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAGOS -->
+
+<section class="pagos">
+
+<div class="titulo">
+
+<h2>
+Métodos de pago
+</h2>
+
+</div>
+
+
+<div class="metodos">
+
+<div class="metodo">
+💳 Visa
+</div>
+
+<div class="metodo">
+🏦 PSE
+</div>
+
+<div class="metodo">
+📱 Nequi
+</div>
+
+<div class="metodo">
+💜 Daviplata
+</div>
+
+<div class="metodo">
+🅿️ PayPal
+</div>
+
+<div class="metodo">
+💳 Mastercard
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<div class="titulo">
+
+<h2>
+Preguntas frecuentes
+</h2>
+
+</div>
+
+
+<div class="pregunta">
+
+<h3>
+¿En cuánto tiempo se ven resultados?
+</h3>
+
+</div>
+
+
+<div class="pregunta">
+
+<h3>
+¿Es apto para todo tipo de cabello?
+</h3>
+
+</div>
+
+
+<div class="pregunta">
+
+<h3>
+¿Cómo funcionan las comisiones?
+</h3>
+
+</div>
+
+
+<div class="pregunta">
+
+<h3>
+¿Hacen envíos nacionales?
+</h3>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 EnyRiza Roots — Todos los derechos reservados
+
+</footer>
+<!-- BOTÓN WHATSAPP -->
+
+<a
+href="https://wa.me/573001112233?text=Hola,%20quiero%20información"
+class="whatsapp"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+<style>
+
+.whatsapp{
+
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25d366;
+    color:white;
+    padding:14px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    z-index:999;
+    transition:0.3s;
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.05);
+    background:#1ebe5d;
+
+}
+
+</style>
+</body>
+</html>
